@@ -34,66 +34,30 @@ body {
   color: black;
 }
 
-/* TICKER */
+/* TICKER — works on all screens */
 .ticker {
-  position: relative;
-  overflow: visible; /* allow text to scroll outside */
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+  box-sizing: border-box;
   margin-top: 20px;
+  border-top: none;
+  border-bottom: none;
 }
 
 .ticker span {
-  position: absolute;
-  white-space: nowrap;
+  display: inline-block;
+  padding-left: 100%;
   animation: scroll 15s linear infinite;
+  white-space: nowrap;
   font-size: 1em;
 }
 
 @keyframes scroll {
-  0% { left: 100%; }
-  100% { left: -100%; }
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
 }
 
 /* PANELS */
 .panel {
-  padding: 40px;
-}
-
-/* Neon Reminders Posters */
-.poster-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px; /* spacing between posters */
-  margin-top: 20px;
-}
-
-.poster {
-  padding: 30px;
-  background: black; /* match page */
-  border: 3px solid #0ff; /* turquoise border visible on desktop */
-  border-radius: 10px; /* optional neon style */
-  font-size: 1.5em;
-  text-shadow: 0 0 10px #0ff, 0 0 20px #0ff; /* glowing text */
-  box-sizing: border-box;
-}
-
-/* Exercises */
-.exercise-list input {
-  margin: 5px;
-}
-
-.score-wrap {
-  margin-top: 20px;
-}
-
-.footer {
-  padding: 20px;
-  background: #111;
-  font-size: 0.9em;
-}
-
-/* MOBILE TWEAKS */
-@media (max-width: 480px) {
-  .ticker span {
-    font-size: 0.9em;
-  }
-}
+  padding: 40px
