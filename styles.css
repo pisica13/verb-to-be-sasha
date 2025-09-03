@@ -4,8 +4,29 @@ body {margin:0; font-family: 'Arial Black', sans-serif; background:black; color:
 .tagline {margin:10px 0;}
 .btn {padding:10px 20px; margin:5px; border:2px solid #f0f; background:transparent; color:#f0f; cursor:pointer;}
 .btn.neon {background:#0ff; color:black;}
-.ticker {overflow:hidden; white-space:nowrap; animation:scroll 10s linear infinite; margin-top:20px;}
-@keyframes scroll {0%{transform:translateX(100%);}100%{transform:translateX(-100%);}}
+.ticker {
+    overflow: hidden;
+    white-space: nowrap;
+    box-sizing: border-box;
+    width: 100%; /* Force the container to be full width */
+    position: relative;
+    margin-top: 20px;
+}
+
+.ticker span {
+    display: inline-block;
+    padding-left: 100%; /* This pushes the starting position of the text off-screen to the right */
+    animation: scroll 15s linear infinite;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(-100%, 0); /* Move the text left by its entire width */
+    }
+}
 .panel {padding:40px;}
 .poster-grid {display:grid; grid-template-columns:repeat(2,1fr); gap:10px; margin-top:20px;}
 .poster {padding:30px; background:#111; border:2px solid #0ff; font-size:1.5em; text-shadow:0 0 5px #f0f;}
