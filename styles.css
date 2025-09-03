@@ -36,4 +36,58 @@ body {
 
 .ticker {
   overflow: hidden;
-  white
+  white-space: nowrap;
+  animation: scroll 20s linear infinite; /* slower for long text */
+  margin-top: 20px;
+}
+
+.ticker span {
+  display: inline-block;
+  padding-left: 100%;   /* start off-screen */
+  min-width: max-content; /* prevents wrapping */
+}
+
+@keyframes scroll {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+.panel {
+  padding: 40px;
+}
+
+.poster-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.poster {
+  padding: 30px;
+  background: #111;
+  border: 2px solid #0ff;
+  font-size: 1.5em;
+  text-shadow: 0 0 5px #f0f;
+}
+
+.exercise-list input {
+  margin: 5px;
+}
+
+.score-wrap {
+  margin-top: 20px;
+}
+
+.footer {
+  padding: 20px;
+  background: #111;
+  font-size: 0.9em;
+}
+
+/* Optional: make ticker text smaller on very narrow screens */
+@media (max-width: 480px) {
+  .ticker span {
+    font-size: 0.9em;
+  }
+}
