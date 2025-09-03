@@ -111,4 +111,13 @@ body {
   }
 
   .poster {
-    min-height: auto;        /* auto height on mobi*
+    min-height: auto;        /* auto height on mobile */
+    font-size: 1.2em;        /* slightly smaller for mobile */
+    text-shadow: 0 0 5px #0ff, 0 0 10px #0ff;
+  }
+
+  .btn {
+    padding: 8px 16px;
+    font-size: 0.9em;
+  }
+}
