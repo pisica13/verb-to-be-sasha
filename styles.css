@@ -26,4 +26,72 @@ body {
   border: 2px solid #f0f;
   background: transparent;
   color: #f0f;
-  cursor: p
+  cursor: pointer;
+}
+
+.btn.neon {
+  background: #0ff;
+  color: black;
+}
+
+/* TICKER */
+.ticker {
+  position: relative;
+  overflow: visible; /* allow text to scroll outside */
+  margin-top: 20px;
+}
+
+.ticker span {
+  position: absolute;
+  white-space: nowrap;
+  animation: scroll 15s linear infinite;
+  font-size: 1em;
+}
+
+@keyframes scroll {
+  0% { left: 100%; }
+  100% { left: -100%; }
+}
+
+/* PANELS */
+.panel {
+  padding: 40px;
+}
+
+/* Neon Reminders Posters */
+.poster-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.poster {
+  padding: 30px;
+  background: #111;
+  border: 2px solid #0ff; /* turquoise box */
+  font-size: 1.5em;
+  text-shadow: 0 0 5px #f0f;
+}
+
+/* Exercises */
+.exercise-list input {
+  margin: 5px;
+}
+
+.score-wrap {
+  margin-top: 20px;
+}
+
+.footer {
+  padding: 20px;
+  background: #111;
+  font-size: 0.9em;
+}
+
+/* MOBILE TWEAKS */
+@media (max-width: 480px) {
+  .ticker span {
+    font-size: 0.9em;
+  }
+}
