@@ -25,3 +25,7 @@ document.getElementById('checkBtn').onclick=()=>{
   document.getElementById('score').innerText=score+" / "+ex.length;
 };
 document.getElementById('resetBtn').onclick=()=>{location.reload();};
+document.getElementById("musicBtn").onclick = () => {
+  document.getElementById("musicPlayer").style.display = "block";
+};
+
