@@ -1,0 +1,14 @@
+body {margin:0; font-family: 'Arial Black', sans-serif; background:black; color:white; text-align:center;}
+.hero {padding:50px;}
+.glow {font-size:2em; color:#f0f; text-shadow:0 0 10px #f0f,0 0 20px #0ff;}
+.tagline {margin:10px 0;}
+.btn {padding:10px 20px; margin:5px; border:2px solid #f0f; background:transparent; color:#f0f; cursor:pointer;}
+.btn.neon {background:#0ff; color:black;}
+.ticker {overflow:hidden; white-space:nowrap; animation:scroll 10s linear infinite; margin-top:20px;}
+@keyframes scroll {0%{transform:translateX(100%);}100%{transform:translateX(-100%);}}
+.panel {padding:40px;}
+.poster-grid {display:grid; grid-template-columns:repeat(2,1fr); gap:10px; margin-top:20px;}
+.poster {padding:30px; background:#111; border:2px solid #0ff; font-size:1.5em; text-shadow:0 0 5px #f0f;}
+.exercise-list input {margin:5px;}
+.score-wrap {margin-top:20px;}
+.footer {padding:20px; background:#111; font-size:0.9em;}
